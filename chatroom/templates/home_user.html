@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <title>Home</title>
+</head>
+<head>
+<style>
+body {
+     height:570px;
+    background-color: #566573;
+    background-position: center;
+     background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+box-sizing: border-box: none;
+    list-style-type: none;
+    text-align:center;
+  padding: 30pt;
+  margin: 0;
+}
+ul li {
+
+width: 150px;
+  height: 50px;
+  border: 0;
+  margin-top:-1px /* Prevent double borders */
+  background-color: white;
+  padding: 0;
+  display: inline-block;
+}
+
+iframe {
+    color: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: green;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.button {
+  border-radius: 1px;
+  background-color: #011a3f;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 12px;
+  padding: 7px;
+  transition: all 0.5s;
+  cursor: pointer;
+  float: right;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+  background-color:#fec22d;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.buttont {
+    background-color:white;
+    border:  none;
+    border-radius: 5px;
+    color: black;
+    padding: 6px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    float: right;
+    cursor: pointer;
+}
+
+
+.navbar {
+  width: 100%;
+  background-color: #011a3f;
+  overflow: auto;
+}
+
+.navbar a {
+  float: right;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar h{
+float: left;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar a:hover {
+  background-color:#fec22d;
+  padding: 15px;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.logo{
+    cursur: pointer;
+    float: left;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+
+</style>
+</head>
+<body>
+<div class="navbar">
+    <h><b>Chat App</b></h>
+    <ul>
+        <form action="log_out" method="post">
+        <button type="submit"  class="button" ><i class="fa fa-fw fa-home"></i><span><b>Log Out</b></span></button>
+        </form>
+
+         <form action="create_group" method="get">
+             <button style="margin-left:2.5em" type="submit" class="button" ><i class="fa fa-pencil fa-fw" aria-hidden="true"></i><span> <b>Create Group</b></span></button>
+             <input style="margin-left:3em" type="text" placeholder="6-15 letters&numbers" class="buttont" name="group_name">
+    </form>
+    </ul>
+</div>
+    <h1>Welcome to GroupChat, %user_name!</h1>
+    <h3>Select a group you want to talk in:</h3>
+    <ul>
+        <li>
+            %groups
+        </li>
+    </ul>
+
+
+</body>
+</html>

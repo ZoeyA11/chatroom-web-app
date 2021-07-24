@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title>%group_name</title>
+</head>
+<head>
+<style>
+body {
+    height:570px;
+    background-color: #566573;
+    background-position: center;
+     background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+iframe {
+    color: white;
+}
+
+a:visited {
+  color: #ffffff;
+  background-color: transparent;
+  text-decoration: none;
+}
+.navbar {
+  width: 100%;
+  background-color: #011a3f;
+  overflow: auto;
+}
+
+.navbar a {
+  float: right;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar h{
+float: left;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar a:hover {
+  background-color:#fec22d;
+  padding: 15px;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.logo{
+    cursur: pointer;
+    float: left;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+.button {
+  border-radius: 1px;
+  background-color: #011a3f;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 12px;
+  padding: 7px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 80%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+  background-color:#fec22d;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.buttont {
+    background-color:white;
+    border:  none;
+    border-radius: 5px;
+    color: black;
+    padding: 6px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    float: center;
+    cursor: pointer;
+}
+.button1{
+  border-radius: 1px;
+  background-color: #011a3f;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 12px;
+  padding: 7px;
+  transition: all 0.5s;
+  cursor: pointer;
+  float: center;
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+    <h><b>Chat App</b></h>
+    <ul>
+  <form action="log_out" method="post">
+        <button type="submit"  class="button" ><i class="fa fa-fw fa-home"></i><span><b>LogOut</b></span></button>
+        </form>
+
+        <form action="/home"  method = "get">
+        <button type="submit"  class="button" ><i class="fa fa-fw fa-book"></i><span><b>MyGroups</b></span></button>
+    </form>
+</ul>
+</div>
+    <h1>Users in the group</h1>
+    <iframe src="users_in_group?id=%group_id" id="users_in_group" width=150" height="100"></iframe>
+    <h1>%group_name</h1>
+   <iframe src="chat?id=%group_id" id="chat" width="750" height="400"></iframe>
+
+    <br>
+    <form action="send_message?id=%group_id" method="post">
+        <input type="text" class="buttont" name="message">
+        <input type="submit" class="button1" value="Send">
+    </form>
+    <br>
+    <form action="add_to_group" method="get">
+        <input type="hidden" value="%group_id" name="id">
+        <input type="text" class="buttont" name="addee">
+        <input type="submit"  class="button1" value="Add to group" >
+    </form>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    {% load static %}
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'style3.css' %}"> -->
+     <meta http-equiv="refresh" content="1">
+</head>
+<head>
+<style>
+body {
+     height:550px;
+     background-color: lightgray;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: relative;
+     color: black;
+     text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+iframe {
+    color: black;
+}
+a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: green;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+%chat
+
+</body>
+</html>
