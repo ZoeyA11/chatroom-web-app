@@ -90,7 +90,7 @@ input[type=text], input[type=password] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border-radius: 20px;
   box-sizing: border-box;
 }
 
@@ -103,6 +103,7 @@ button {
   border: none;
   cursor: pointer;
   width: 100%;
+  border-radius: 10px;
 }
 
 button:hover {
@@ -121,6 +122,7 @@ button:hover {
 
 .container {
   padding: 16px;
+
 }
 
 span.psw {
@@ -145,11 +147,17 @@ span.psw {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #011a3f;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
+  border-radius: 20px;
   width: 80%; /* Could be more or less, depending on screen size */
 }
+
+.signupbtn {
+  background-color: #103c08;
+  width: auto;
+  padding: 10px 18px;
+  }
 
 /* The Close Button (x) */
 .close {
@@ -178,6 +186,7 @@ span.psw {
   to {-webkit-transform: scale(1)}
 }
 
+
 @keyframes animatezoom {
   from {transform: scale(0)}
   to {transform: scale(1)}
@@ -188,6 +197,9 @@ span.psw {
   span.psw {
      display: block;
      float: none;
+  }
+  .signupbtn {
+    width: 100%;
   }
   .cancelbtn {
      width: 100%;
@@ -214,12 +226,10 @@ span.psw {
       <input type="text" placeholder="Enter Username" name="user_name" required>
         <br>
       <input type="password" placeholder="Enter Password" name="password" required >
-
-      <button type="submit"  value="login" name="action">Login</button>
     </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    <div class="container" style="background-color:#011a3f;border-radius: 20px; ">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn" value="login" name="action">Login</button>
     </div>
   </form>
 </div>

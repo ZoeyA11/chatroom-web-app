@@ -25,6 +25,7 @@ ul {
 
 iframe {
     color: white;
+  border-radius: 20px;
 }
 
 a:visited {
@@ -153,9 +154,11 @@ float: left;
 </ul>
 </div>
     <h1>Users in the group</h1>
-    <iframe src="users_in_group?id=%group_id" id="users_in_group" width=150" height="100"></iframe>
-    <h1>%group_name</h1>
-   <iframe src="chat?id=%group_id" id="chat" width="750" height="400"></iframe>
+
+    <iframe src="users_in_group?id=%group_id" id="users_in_group" ></iframe>
+    <h1 >%group_name</h1>
+   <iframe src="chat?id=%group_id" id="chat" width="500px" height="250px"></iframe>
+
 
     <br>
     <form action="send_message?id=%group_id" method="post">

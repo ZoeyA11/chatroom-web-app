@@ -81,7 +81,7 @@ input[type=text], input[type=password] {
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
-  border: none;
+  border-radius: 10px;
   background: #f1f1f1;
 }
 
@@ -97,7 +97,7 @@ button {
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
-  border: none;
+  border-radius: 10px;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
@@ -144,9 +144,9 @@ button:hover {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #bbbbbb;
+  background-color: #011a3f;
   margin: auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
+  border-radius: 20px;
   width: 60%; /* Could be more or less, depending on screen size */
 }
 
@@ -200,8 +200,8 @@ hr {
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
   <form class="modal-content" action="userauth" method="post">
     <div class="container">
-      <h1>Sign Up</h1>
-      <p>Please fill in this form to create an account.</p>
+      <h1 style="color: white;">Register</h1>
+      <p style="color: white;"> Create an account.</p>
       <hr>
       <input type="text" placeholder="Enter user name" name="user_name" required >
       <input type="password" placeholder="Enter Password" name="password" required>
