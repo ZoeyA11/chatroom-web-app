@@ -1,6 +1,10 @@
 # chatroom-web-app
 Group Chat using: Django, Json,  python, Html, css and js
-connect via phone and computer in the same network
+<br>
+connect with the db via client.py
+<br>
+<h2>connect via phone and computer in the same network</h2>
+
 ![Login](LOGIN.JPG)
 
 ![Login](LOGIN_FORM.JPG)
