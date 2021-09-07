@@ -1,5 +1,5 @@
 # chatroom-web-app
-# Group Chat using: Django, Json,  python, Html, css and js
+# Group Chat using: Django, Json, MongoDB, python, Html, css and js
 <br>
 <h2>Connect the db via client.py</h2>
 <br>
