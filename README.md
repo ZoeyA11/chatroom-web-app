@@ -1,7 +1,7 @@
 # chatroom-web-app
 # Group Chat using: Django, Json, MongoDB, python, Html, css and js
 <br>
-<h2>Connect the db via client.py</h2>
+<h2>Connect the db via client.py -> server.py -> funcs.py -> db.py</h2>
 <br>
 <h2>connect via phone and computer in the same network</h2>
 
