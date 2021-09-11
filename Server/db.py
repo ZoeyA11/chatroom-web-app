@@ -17,9 +17,7 @@ def insert_user(data):
     if Global group dose'nt exists it create the group with the create_global_group() function.
     '''
     if not (group_exists('Global')):
-        print ('create group global')
         create_global_group()  # create global group- the fist and main group
-    else: print ('exist yes')
     post_user = {'user_name': data['user_name'], 'password': data['password'], 'group_ids': ['0']}
     user_collection.insert_one(post_user)
 
@@ -86,7 +84,6 @@ def find_group_messages(group_id):
     :return: return list of group messages
     '''
     group = group_collection.find_one({'group_ids': group_id})
-    #print group['messages']
     if group['messages'] is None:
         return [[]]
     return group['messages']
