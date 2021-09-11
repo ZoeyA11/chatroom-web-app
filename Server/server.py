@@ -27,7 +27,6 @@ def handle(client):
     :param client: data(requests) from client
     :return: send to the client the response for the requests (in json)
     '''
-    print("got to handle")
     data = (client.recv(4096)).decode("utf-8")
     data1 = loads(data)
     reason = ""
@@ -43,10 +42,8 @@ def handle(client):
             result, reason = login(data1)
         elif data1['request'] == 'get_user_groups':
             result, reason, extra = get_user_groups(data1)
-            pprint(extra)
         elif data1['request'] == 'get_group_name':
             result, reason, extra = getgroup_name(data1)
-            pprint(extra)
         elif data1['request'] == 'send_message':
             result, reason = send_message(data1)
         elif data1['request'] == 'get_messages':
