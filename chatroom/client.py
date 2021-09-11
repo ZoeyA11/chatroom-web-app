@@ -6,13 +6,9 @@ The script has functions that the script views.py use. Basically this script lin
 from __future__ import print_function
 from socket import socket, gethostname
 from json import dumps, loads
-from cryptography.fernet import Fernet
 IP_address = gethostname()
 Port = 1927
 
-key = Fernet.generate_key()
-# Instance the Fernet class with the key
-fernet = Fernet(key)
 
 def __feed(json):
     '''
