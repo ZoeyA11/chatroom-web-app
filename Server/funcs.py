@@ -52,7 +52,6 @@ def register(data1):
         str1 = "can't accept it"
     else:
         flag2 = is_valid_password(password)
-        print ("i checked")
         if flag2 is False and flag1 is True:
             str1 = 'your password is not strong enough please enter another password :)'
         elif flag1 is False and flag2 is True:
