@@ -103,7 +103,6 @@ def get_messages(id, user_name):
         'user_name': user_name
     })
     if result['result']:
-        #print('<br>'.join(['<b>%s</b>: %s' % tuple(x) for x in result['extra']['messages']]))
         return True, '<br>'.join(['<b>%s</b>: %s' % tuple(x) for x in result['extra']['messages']])
     else:
         return False, result['reason']
